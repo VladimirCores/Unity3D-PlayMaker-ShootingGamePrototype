@@ -2,15 +2,21 @@
 ./Temp
 ./UnityPackageManager
 ./obj
+.idea
+*.csproj
+*.log
 ./Library
 ./Assets/Libs
-./Assets/net.fabrejean
+/Assets/Net.Fabrejean
 ./Assets/PlayMaker Custom Actions
 ./Assets/PlayMaker uGui
 ./Assets/PlayMaker Utils
 ./Assets/Plugins
 /Library/
 /obj/
-/PlayMaker/
+/Assets/Gizmos/
+/Assets/PlayMaker/
+!/Assets/PlayMaker/Resources/PlayMakerGlobals.asset
+!PlayMakerGlobals.asset
 /Temp/
 /UnityPackageManager/

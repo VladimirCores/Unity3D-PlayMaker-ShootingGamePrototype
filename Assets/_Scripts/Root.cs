@@ -11,8 +11,6 @@ public class Root : MonoBehaviour {
 	[Range(10, 40)]
 	public int bulletsAmout;
 
-	private PlayMakerFSM rootFSM;
-
 	// Use this for initialization
 	void Start () {
 		FsmVariables.GlobalVariables.FindFsmInt ("CONST_BOTS_AMOUNT").Value = botsAmout;
