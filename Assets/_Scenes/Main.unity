@@ -385,7 +385,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -722.5, y: -62.3}
+  m_AnchoredPosition: {x: -930, y: -62.300003}
   m_SizeDelta: {x: 150, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &856272165
@@ -478,15 +478,15 @@ MonoBehaviour:
     dataVersion: 2
     usedInTemplate: {fileID: 0}
     name: Initialization
-    startState: Init Unit
+    startState: Init Preferences
     states:
     - name: Init Unit
       description: 
       colorIndex: 1
       position:
         serializedVersion: 2
-        x: 69.94531
-        y: 102.015625
+        x: 54.085938
+        y: 185
         width: 100
         height: 32
       isBreakpoint: 0
@@ -504,8 +504,6 @@ MonoBehaviour:
         colorIndex: 0
       actionData:
         actionNames:
-        - HutongGames.PlayMaker.Actions.GetScreenWidth
-        - HutongGames.PlayMaker.Actions.GetScreenHeight
         - HutongGames.PlayMaker.Actions.RandomFloat
         - HutongGames.PlayMaker.Actions.RandomFloat
         - HutongGames.PlayMaker.Actions.ScreenToWorldPoint
@@ -515,12 +513,10 @@ MonoBehaviour:
         - 
         - 
         - 
-        - 
-        - 
-        actionEnabled: 010101010101
-        actionIsOpen: 010101010101
-        actionStartIndex: 000000000200000004000000070000000a00000014000000
-        actionHashCodes: 44e7c20444e7c2042ee017042ee01704800a6c0560532301
+        actionEnabled: 01010101
+        actionIsOpen: 00000001
+        actionStartIndex: 00000000030000000600000010000000
+        actionHashCodes: 2ee017042ee01704800a6c0560532301
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
@@ -560,14 +556,20 @@ MonoBehaviour:
         fsmArrayParams: []
         fsmEnumParams: []
         fsmFloatParams:
-        - useVariable: 1
-          name: Pref_Screen_Width
+        - useVariable: 0
+          name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
         - useVariable: 1
           name: Pref_Screen_Height
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: Random_Position_Y
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -586,24 +588,6 @@ MonoBehaviour:
           value: 0
         - useVariable: 1
           name: Random_Position_X
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: Pref_Screen_Height
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: Random_Position_Y
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -682,17 +666,13 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 000000
+        byteData: 00
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 0f000000010000000f000000010000000f0000000f0000000f0000000f0000000f0000000f0000001c0000000f0000000f0000000f000000110000001c0000000f0000000f0000000f000000010000001300000013000000130000001c0000001c00000013000000
+        paramDataType: 0f0000000f0000000f0000000f0000000f0000000f0000001c0000000f0000000f0000000f000000110000001c0000000f0000000f0000000f000000010000001300000013000000130000001c0000001c00000013000000
         paramName:
-        - storeScreenWidth
-        - everyFrame
-        - storeScreenHeight
-        - everyFrame
         - min
         - max
         - storeResult
@@ -715,15 +695,15 @@ MonoBehaviour:
         - position
         - rotation
         - storeObject
-        paramDataPos: 000000000000000001000000010000000200000003000000040000000500000006000000070000000000000008000000090000000a00000000000000010000000b0000000c0000000d00000002000000000000000100000002000000020000000300000003000000
-        paramByteDataSize: 0000000001000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000
+        paramDataPos: 000000000100000002000000030000000400000005000000000000000600000007000000080000000000000001000000090000000a0000000b00000000000000000000000100000002000000020000000300000003000000
+        paramByteDataSize: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000
     - name: Ready
       description: 
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 263.02344
-        y: 397.58594
+        x: 351.42188
+        y: 297.6797
         width: 100
         height: 16
       isBreakpoint: 0
@@ -774,16 +754,16 @@ MonoBehaviour:
       colorIndex: 1
       position:
         serializedVersion: 2
-        x: 54.875
-        y: 205.75
-        width: 155
+        x: 285.20312
+        y: 121.24219
+        width: 174
         height: 48
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
       transitions:
       - fsmEvent:
-          name: CREATE_BOT_EVENT
+          name: CREATE_ANOTHER_BOT
           isSystemEvent: 0
           isGlobal: 0
         toState: Init Bots
@@ -812,7 +792,7 @@ MonoBehaviour:
         - 
         - 
         actionEnabled: 01010101
-        actionIsOpen: 01010101
+        actionIsOpen: 00000101
         actionStartIndex: 00000000060000000b0000000e000000
         actionHashCodes: 60532301a0dd8303603dd90509faa102
         unityObjectParams: []
@@ -871,7 +851,7 @@ MonoBehaviour:
         fsmFloatParams: []
         fsmIntParams:
         - useVariable: 1
-          name: Bots_Counter
+          name: Bots_Amount
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -883,7 +863,7 @@ MonoBehaviour:
           networkSync: 0
           value: 1
         - useVariable: 1
-          name: Bots_Counter
+          name: Bots_Amount
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -932,7 +912,7 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams:
         - FINISHED
-        - CREATE_BOT_EVENT
+        - CREATE_ANOTHER_BOT
         - 
         byteData: 0000
         arrayParamSizes: 
@@ -968,9 +948,9 @@ MonoBehaviour:
       colorIndex: 4
       position:
         serializedVersion: 2
-        x: 264.35156
-        y: 300.39844
-        width: 178
+        x: 293.17188
+        y: 195.08594
+        width: 169
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -999,7 +979,7 @@ MonoBehaviour:
         - 
         - 
         actionEnabled: 0101010101
-        actionIsOpen: 0101010101
+        actionIsOpen: 0101010000
         actionStartIndex: 0000000004000000080000001100000014000000
         actionHashCodes: 404de804404de8047370ae05786b390209fbab04
         unityObjectParams: []
@@ -1027,7 +1007,7 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 1
-          name: Bots_Amount_String
+          name: Bots_Total_String
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -1055,9 +1035,9 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 'Score:'
+          value: 'Score: '
         - useVariable: 1
-          name: Bots_Counter_String
+          name: Bots_Amount
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -1069,7 +1049,7 @@ MonoBehaviour:
           networkSync: 0
           value: ' / '
         - useVariable: 1
-          name: Bots_Amount_String
+          name: Bots_Total_String
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -1099,7 +1079,7 @@ MonoBehaviour:
           networkSync: 0
           value: Untagged
         - useVariable: 1
-          name: GUI_Score_Text
+          name: Bots_Counter_String
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -1117,7 +1097,7 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: Bots_Counter
+          name: Bots_Amount
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -1180,9 +1160,9 @@ MonoBehaviour:
       colorIndex: 4
       position:
         serializedVersion: 2
-        x: 263.77344
-        y: 345.89844
-        width: 193
+        x: 297.90625
+        y: 243.77344
+        width: 182
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -1203,17 +1183,15 @@ MonoBehaviour:
         - HutongGames.PlayMaker.Actions.BuildString
         - HutongGames.PlayMaker.Actions.FindGameObject
         - HutongGames.PlayMaker.Actions.UiTextSetText
-        - HutongGames.PlayMaker.Actions.SetIntValue
         customNames:
         - Convert Int To String
         - 
         - 
         - 
-        - 
-        actionEnabled: 0101010101
-        actionIsOpen: 0101010101
-        actionStartIndex: 00000000040000000b0000000e00000012000000
-        actionHashCodes: 404de8047370ae05786b390209fbab04603dd905
+        actionEnabled: 01010101
+        actionIsOpen: 01010101
+        actionStartIndex: 00000000040000000b0000000e000000
+        actionHashCodes: 404de8047370ae05786b390209fbab04
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
@@ -1287,7 +1265,7 @@ MonoBehaviour:
           networkSync: 0
           value: Untagged
         - useVariable: 1
-          name: GUI_Bullets_Text
+          name: Bullets_Amount_String
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -1299,19 +1277,7 @@ MonoBehaviour:
         fsmFloatParams: []
         fsmIntParams:
         - useVariable: 1
-          name: CONST_BULLETS_AMOUNT
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: Bullets_Counter
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: CONST_BULLETS_AMOUNT
+          name: Bullets_Amount
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -1335,13 +1301,13 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 00000000
+        byteData: 000000
         arrayParamSizes: 02000000
         arrayParamTypes:
         - HutongGames.PlayMaker.FsmString
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 100000001200000012000000010000000c00000012000000120000001200000011000000120000000100000012000000120000001300000014000000120000001100000001000000100000001000000001000000
+        paramDataType: 100000001200000012000000010000000c00000012000000120000001200000011000000120000000100000012000000120000001300000014000000120000001100000001000000
         paramName:
         - intVariable
         - stringVariable
@@ -1361,19 +1327,16 @@ MonoBehaviour:
         - text
         - resetOnExit
         - everyFrame
-        - intVariable
-        - intValue
-        - everyFrame
-        paramDataPos: 000000000000000001000000000000000000000002000000030000000400000000000000050000000100000006000000070000000000000000000000080000000100000002000000010000000200000003000000
-        paramByteDataSize: 000000000000000000000000010000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000001000000000000000000000001000000
+        paramDataPos: 000000000000000001000000000000000000000002000000030000000400000000000000050000000100000006000000070000000000000000000000080000000100000002000000
+        paramByteDataSize: 000000000000000000000000010000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000001000000
     - name: Init Bots Container
       description: 
       colorIndex: 1
       position:
         serializedVersion: 2
-        x: 61.25
-        y: 153.02344
-        width: 148
+        x: 284.7578
+        y: 57.257812
+        width: 138
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -1396,7 +1359,7 @@ MonoBehaviour:
         - 
         - 
         actionEnabled: 0101
-        actionIsOpen: 0101
+        actionIsOpen: 0001
         actionStartIndex: 0000000005000000
         actionHashCodes: bf83c9009bd6f801
         unityObjectParams: []
@@ -1482,14 +1445,109 @@ MonoBehaviour:
         - name
         paramDataPos: 00000000010000000000000001000000020000000000000000000000
         paramByteDataSize: 00000000000000000000000000000000000000000000000000000000
+    - name: Init Preferences
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 54.320312
+        y: 125.515625
+        width: 123
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Init Unit
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.GetScreenWidth
+        - HutongGames.PlayMaker.Actions.GetScreenHeight
+        - HutongGames.PlayMaker.Actions.SetIntValue
+        customNames:
+        - 
+        - 
+        - 
+        actionEnabled: 010101
+        actionIsOpen: 000101
+        actionStartIndex: 000000000200000004000000
+        actionHashCodes: 44e7c20444e7c204603dd905
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 1
+          name: Pref_Screen_Width
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: Pref_Screen_Height
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmIntParams:
+        - useVariable: 1
+          name: Bullets_Amount
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: CONST_BULLETS_AMOUNT
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 000000
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 0f000000010000000f00000001000000100000001000000001000000
+        paramName:
+        - storeScreenWidth
+        - everyFrame
+        - storeScreenHeight
+        - everyFrame
+        - intVariable
+        - intValue
+        - everyFrame
+        paramDataPos: 00000000000000000100000001000000000000000100000002000000
+        paramByteDataSize: 00000000010000000000000001000000000000000000000001000000
     events:
     - name: FINISHED
       isSystemEvent: 1
       isGlobal: 0
-    - name: MOUSE UP
-      isSystemEvent: 1
-      isGlobal: 0
-    - name: CREATE_BOT_EVENT
+    - name: CREATE_ANOTHER_BOT
       isSystemEvent: 0
       isGlobal: 0
     globalTransitions: []
@@ -1507,23 +1565,17 @@ MonoBehaviour:
         showInInspector: 0
         networkSync: 0
         value: 0
-      intVariables:
-      - useVariable: 1
-        name: Bullets_Amount
-        tooltip: 
-        showInInspector: 0
-        networkSync: 0
-        value: 0
+      intVariables: []
       boolVariables: []
       stringVariables:
       - useVariable: 1
-        name: Bots_Amount_String
+        name: Bots_Counter_String
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 
       - useVariable: 1
-        name: Bots_Counter_String
+        name: Bots_Total_String
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -1535,13 +1587,7 @@ MonoBehaviour:
         networkSync: 0
         value: 
       vector2Variables: []
-      vector3Variables:
-      - useVariable: 1
-        name: Unit_Move_To
-        tooltip: 
-        showInInspector: 0
-        networkSync: 0
-        value: {x: 0, y: 0, z: 0}
+      vector3Variables: []
       colorVariables: []
       rectVariables: []
       quaternionVariables: []
@@ -1577,7 +1623,7 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+      variableCategoryIDs: 000000000000000000000000000000000000000000000000000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 1
